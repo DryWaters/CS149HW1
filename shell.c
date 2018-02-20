@@ -2,7 +2,8 @@
  * shell.c
  *
  *  Created on: Feb 15, 2018
- *      Author: daniel
+ *      Author: Daniel Waters
+ *      CSUID: 011872692
  */
 
 #include <stdio.h>
@@ -20,7 +21,7 @@ void stripNewLine(char[]);
 int main(void) {
 	char *args[MAXLINE / 2 + 1];
 	char *input;				// location to save the input from the user (used by getline)
-	size_t bufferSize = MAXLINE;// unsigned int to hold the size of the max buffer size to hold the contents of getline
+	size_t bufferSize = MAXLINE;// unsigned int to hold the size of the max buffer size (used by getline)
 	int runInBackground = 0;	// Flag to see if user wants to run the process in the background
 	int should_run = 1;			// Flag to see if user wants to exit
 	int numberOfArgs = 0;		// Keeps track of the number of arguments
@@ -86,7 +87,7 @@ int main(void) {
 		}
 	}
 
-	// clear the input buffer (malloc)
+	// clear the input buffer (from malloc)
 	free(input);
 	return 0;
 }
